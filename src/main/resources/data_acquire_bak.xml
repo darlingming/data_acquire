@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Author DM -->
+<configuration>
+    <version>V1.0</version>
+    <name>Big Data DownLoad Services</name>
+    <services>
+        <service>
+            <name>DownService</name>
+            <!--业务处理类-->
+            <serviceClass>com.te.dm.service.impl.HttpServiceImpl</serviceClass>
+            <!--下载本地地址-->
+            <downLoadFilePath>D:\DearM\idea_workspace\data_acquire\out\data</downLoadFilePath>
+            <!--线程数-->
+            <threadNum>20</threadNum>
+            <!--失败重试次数-->
+            <failedRetryTimes>5</failedRetryTimes>
+            <!--失败次数累积退出-->
+            <failedExitTimes>10</failedExitTimes>
+            <!--失败重试睡眠时间毫秒-->
+            <retrySleepTime>1000</retrySleepTime>
+
+            <http>
+                <!--访问的URL地址 -->
+                <baseUrl>http://localhost:8080/services</baseUrl>
+
+                <!--//连接超时时间-->
+                <connectTimeout>5000</connectTimeout>
+                <!--//请求超时时间-->
+                <connectionRequestTimeout>10</connectionRequestTimeout>
+                <!--//数据超时时间-->
+                <socketTimeout>100</socketTimeout>
+                <!--//路由的连接数-->
+                <maxPerRoute>100</maxPerRoute>
+                <!--//最大连接数-->
+                <maxTotal>200</maxTotal>
+                <!--获取总数-->
+                <actionCount>getValueCount</actionCount>
+                <!--获取数据-->
+                <actionInfo>getValueInfo</actionInfo>
+                <!--业务类型-->
+                <dataType>5001</dataType>
+                <!--省份-->
+                <provice>011</provice>
+                <!--日期默认当前时间-->
+                <dataTime>20180926</dataTime>
+                <!--token-->
+                <token>0000</token>
+            </http>
+            <shell>
+                <!--是否开启-->
+                <verification>true</verification>
+                <!--命令名称-->
+                <name>window</name>
+                <!--命令-->
+                <command>java</command>
+                <!--参数N个-->
+                <arguments>-version</arguments>
+                <arguments></arguments>
+                <arguments></arguments>
+            </shell>
+        </service>
+
+
+    </services>
+</configuration>
+
