@@ -300,6 +300,7 @@ public class FtpService {
         // 关闭文件流
         inputStream.close();
         return flag;
+
     }
 
     /**
