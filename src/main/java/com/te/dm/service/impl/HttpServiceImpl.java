@@ -96,7 +96,16 @@ public class HttpServiceImpl implements HttpService {
                 if (null != value && !"null".equals(value)) {
                     int count = Integer.valueOf(value);
                     String filePath = service.getDownLoadFilePath() + File.separator + cuurDate;
-                    String fileName = service.getHttp().getProvice() + "_" + service.getHttp().getDataType() + "_" + System.currentTimeMillis() + ".DAT";
+                    StringBuffer sb = new StringBuffer();
+                    sb.append(cuurDate);
+                    if(null != service.getHttp().getProvice() && !service.getHttp().getProvice().isEmpty()){
+                        sb.append("_" + service.getHttp().getProvice());
+                    }
+                    if(null != service.getHttp().getDataType() && !service.getHttp().getDataType().isEmpty()){
+                        sb.append("_" + service.getHttp().getDataType());
+                    }
+                    sb.append("_" + System.currentTimeMillis() + ".DAT");
+                    String fileName = sb.toString();
                     File file = new File(filePath);
                     if (!file.exists()) {
                         file.mkdirs();

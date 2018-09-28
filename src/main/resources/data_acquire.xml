@@ -38,13 +38,13 @@
                 <!--获取数据-->
                 <actionInfo>getValueInfo</actionInfo>
                 <!--业务类型-->
-                <dataType>5001</dataType>
+                <dataType></dataType>
                 <!--省份-->
-                <provice>011</provice>
+                <provice></provice>
                 <!--日期默认当前时间-->
                 <dataTime>20180926</dataTime>
                 <!--token-->
-                <token>0000</token>
+                <token>2ECDA7A0252B442AC6ECF47462119F51</token>
             </http>
             <shell>
                 <!--是否开启-->

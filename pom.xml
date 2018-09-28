@@ -8,10 +8,7 @@
     <artifactId>data_acquire</artifactId>
     <packaging>pom</packaging>
     <version>te_v1.0</version>
-    <modules>
-        <module>data_interface</module>
-        <module>data_interface</module>
-    </modules>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

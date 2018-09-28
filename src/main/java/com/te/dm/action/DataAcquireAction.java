@@ -27,9 +27,13 @@ public class DataAcquireAction {
         logger.info(Arrays.toString(args));
 
         try {
+            if(args.length < 1){
+                logger.error("参数错误，传入xml配置");
+                System.exit(0);
+            }
             String configFilePath = args[0];//配置文件路径
 
-            configFilePath = "D:\\DearM\\idea_workspace\\data_acquire\\src\\main\\resources\\data_acquire.xml";
+            //configFilePath = "D:\\DearM\\idea_workspace\\data_acquire\\src\\main\\resources\\data_acquire.xml";
             Configuration config = XmlConfigurationFactory.loadFile(configFilePath, Configuration.class);
             logger.info(config.getName() + ":" + config.getVersion());
 
